@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { useState, useEffect } from 'react';
 
 const fetchTastingNode = id => {
+    console.log("hi");
     if (id) {
         return $.ajax({
             method: 'GET',
@@ -21,3 +22,11 @@ export const useFetchWine = id => {
     useEffect(() => { fetchData() }, [id]);
     return data;
 };
+
+export const debounce = (func, interval) => {
+    let check;
+    return (...args) => {
+        clearTimeout(check);
+        check = setTimeout(() => func(...args), interval);
+    }
+}

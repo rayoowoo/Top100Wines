@@ -1,16 +1,18 @@
 import { wines } from '../../assets/data/top100_2018';
 import React from 'react';
 import {useState} from 'react';
-import { useFetchWine } from '../utils/wine_utils';
+import { useFetchWine, debounce } from '../utils/wine_utils';
 
 "use strict";
 
 export default () => {
     const [wine, updateWine] = useState({});
-    
+
+    const updateWineDB = debounce(wine => updateWine(wine), 500)
+
     const wineHover = oneWine => e => {
         e.preventDefault();
-        updateWine(oneWine);
+        updateWineDB(oneWine);
     }
 
     const winesList = wines.map(el => {
