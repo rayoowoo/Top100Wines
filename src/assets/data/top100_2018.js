@@ -1,6 +1,6 @@
 // https://top-100-example.s3.amazonaws.com/t100_2018.json
 
-[
+export const wines = [
     {
         "id": "451874",
         "winery_full": "Tenuta San Guido",
