@@ -1,17 +1,21 @@
 import { wines } from '../../assets/data/top100_2018';
 import React from 'react';
 import {useState} from 'react';
+import { useFetchWine } from '../utils/wine_utils';
+
+"use strict";
 
 export default () => {
-    const [wine, setWine] = useState();
+    const [wine, updateWine] = useState({});
     
-    const useWineHover = name => e => {
-        setWine(name);
+    const wineHover = oneWine => e => {
+        e.preventDefault();
+        updateWine(oneWine);
     }
 
     const winesList = wines.map(el => {
         return (
-            <tr key={`wine-${el.id}`} onMouseOver={useWineHover(el.wine_full)}>
+            <tr key={`wine-${el.id}`} onMouseOver={wineHover(el)}>
                 <td>{el.score}</td>
                 <td>{el.winery_full}</td>
                 <td>{el.wine_full}</td>
@@ -22,11 +26,13 @@ export default () => {
         )
     })
 
-    return (
+    const note = useFetchWine(wine.id)
 
+    return (
         <>
             <div>
-                {wine}
+                <p>{wine.wine_full}:</p>
+                {note}
             </div>
 
             <table className="wines-list">
