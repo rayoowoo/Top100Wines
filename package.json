@@ -21,6 +21,7 @@
   "bugs": {
     "url": "https://github.com/rayoowoo/Top100Wines/issues"
   },
+  "proxy": "http://localhost:3000",
   "homepage": "https://github.com/rayoowoo/Top100Wines#readme",
   "dependencies": {
     "@babel/core": "^7.6.2",
@@ -33,10 +34,13 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^3.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
     "lodash": "^4.17.15",
+    "nodemon": "^1.19.3",
     "postcss-loader": "^3.0.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",

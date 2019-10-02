@@ -1,0 +1,21 @@
+
+.wines-list {
+    width: 60%;
+    margin-top: 30vh;
+}
+
+.wines-list-headers {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.wines-list-items {
+    padding: 2.5px 0px;
+
+    tr:hover {
+        background-color: darkred;
+        font-weight: bolder;
+        cursor: pointer;
+        color: white;
+    }
+}

@@ -8,7 +8,7 @@ import { useFetchWine, debounce } from '../utils/wine_utils';
 export default () => {
     const [wine, updateWine] = useState({});
 
-    const updateWineDB = debounce(wine => updateWine(wine), 500)
+    const updateWineDB = debounce(wine => updateWine(wine), 250)
 
     const wineHover = oneWine => e => {
         e.preventDefault();
@@ -30,15 +30,27 @@ export default () => {
 
     const note = useFetchWine(wine.id)
 
+    const display = wine.id ? (
+        <div className="wine-display-content">
+            <h1>{wine.wine_full}</h1>
+            <p>{note}</p>
+        </div>
+    ) : (
+        <div className="wine-display-content">
+            <h1>Hover over a wine!</h1>
+            <p>Information about the wine's taste will show up here.</p>
+        </div>
+    );
+
     return (
         <>
-            <div>
-                <p>{wine.wine_full}:</p>
-                {note}
+            <div className="wine-display">
+                <header className="title">TOP 100 Wines of 2018</header>
+                {display}
             </div>
 
             <table className="wines-list">
-                <thead>
+                <thead className="wines-list-headers">
                     <tr>
                         <td>Score</td>
                         <td>Winery</td>
@@ -48,7 +60,7 @@ export default () => {
                         <td>Region</td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="wines-list-items">
                     {winesList}
                 </tbody>
 

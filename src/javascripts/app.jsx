@@ -3,6 +3,8 @@ import Table from './components/table';
 
 export default () => {
     return (
-        <Table />
+        <section className="wines">
+            <Table />
+        </section>
     )
 }

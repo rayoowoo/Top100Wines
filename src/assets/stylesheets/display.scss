@@ -1,0 +1,32 @@
+.wine-display {
+    width: 100%;
+    background-color: white;
+    top: 0;
+    position: fixed;
+
+
+    .title {
+        text-align: center;
+        font-size: 3em;
+        margin: 0.5em;
+    }
+
+    .wine-display-content {
+        width: 60%;
+        border: 1px solid gray;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        height: 15vh;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 1.5em;
+        font-family: Amiri, serif;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+}

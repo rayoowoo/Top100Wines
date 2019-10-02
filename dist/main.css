@@ -1,0 +1,64 @@
+body, h1, h2, h3, p, li, ul, ol, nav, section, header, footer, strong, div, span, aside, a, button, form, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  text-decoration: inherit;
+  background: transparent; }
+
+ul, ol {
+  list-style: none; }
+
+*:focus {
+  outline: none; }
+
+body {
+  font-family: Roboto, sans-serif; }
+
+.wines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.wine-display {
+  width: 100%;
+  background-color: white;
+  top: 0;
+  position: fixed; }
+  .wine-display .title {
+    text-align: center;
+    font-size: 3em;
+    margin: 0.5em; }
+  .wine-display .wine-display-content {
+    width: 60%;
+    border: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 15vh; }
+  .wine-display h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: Amiri, serif; }
+  .wine-display p {
+    font-size: 1.25em; }
+
+.wines-list {
+  width: 60%;
+  margin-top: 30vh; }
+
+.wines-list-headers {
+  font-weight: bold;
+  font-size: 1.1em; }
+
+.wines-list-items {
+  padding: 2.5px 0px; }
+  .wines-list-items tr:hover {
+    background-color: darkred;
+    font-weight: bolder;
+    cursor: pointer;
+    color: white; }
+
+/*# sourceMappingURL=main.css.map */
