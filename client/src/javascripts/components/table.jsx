@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
-import { useFetchWines, useFetchWine, debounce } from '../utils/wine_utils';
+import { useFetchWines, useFetchNote, debounce } from '../utils/wine_utils';
+import {navigate} from 'hookrouter';
 
 "use strict";
 
@@ -18,7 +19,7 @@ export default () => {
 
     const winesList = wines.map(el => {
         return (
-            <tr key={`wine-${el.id}`} onMouseOver={wineHover(el)}>
+            <tr key={`wine-${el.id}`} onMouseOver={wineHover(el)} onClick={() => navigate(`/${el.id}`)}>
                 <td>{el.score}</td>
                 <td>{el.winery_full}</td>
                 <td>{el.wine_full}</td>
@@ -29,7 +30,7 @@ export default () => {
         )
     })
 
-    const note = useFetchWine(wine.id)
+    const note = useFetchNote(wine.id)
 
     const display = wine.id ? (
         <div className="wine-display-content">
