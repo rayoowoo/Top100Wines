@@ -1,5 +1,5 @@
 import express from 'express';
-import wines from './src/assets/data/top100_2018_full';
+import wines from './client/src/assets/data/top100_2018_full';
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.get('/api/wines/:id', (req, res) => {
     res.send(wine);
 })
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`listening on port ${port}...`))
 
 app.get('/express_backend', (req, res) => {

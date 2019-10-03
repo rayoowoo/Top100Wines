@@ -1,12 +1,13 @@
-import { wines } from '../../assets/data/top100_2018';
 import React from 'react';
 import {useState} from 'react';
-import { useFetchWine, debounce } from '../utils/wine_utils';
+import { useFetchWines, useFetchWine, debounce } from '../utils/wine_utils';
 
 "use strict";
 
 export default () => {
     const [wine, updateWine] = useState({});
+
+    const wines = useFetchWines() || [];
 
     const updateWineDB = debounce(wine => updateWine(wine), 250)
 

@@ -10,6 +10,23 @@ const fetchTastingNode = id => {
         })
     }
 }
+
+const fetchWines = () => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/wines`
+    })
+}
+
+export const useFetchWines = () => {
+    const [data, setData] = useState(null);
+    async function fetchData() {
+        const response = await fetchWines();
+        setData(response);
+    }
+    useEffect(() => { fetchData() }, []);
+    return data;
+};
     
 export const useFetchWine = id => {
     const [data, setData] = useState(null);

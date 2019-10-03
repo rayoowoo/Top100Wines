@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode=development",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "postinstall": "webpack"
   },
   "engines": {
@@ -21,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/rayoowoo/Top100Wines/issues"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:3001",
   "homepage": "https://github.com/rayoowoo/Top100Wines#readme",
   "dependencies": {
     "@babel/core": "^7.6.2",
@@ -36,6 +37,7 @@
     "css-loader": "^3.2.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "express-generator": "^4.16.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
@@ -45,6 +47,7 @@
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.1.2",
     "sass": "^1.23.0",
     "sass-loader": "^8.0.0",
     "webpack": "^4.41.0",
