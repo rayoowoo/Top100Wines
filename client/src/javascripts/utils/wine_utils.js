@@ -17,8 +17,6 @@ const fetchWines = () => {
     })
 }
 
-window.fetch = fetchWines;
-
 export const useFetchWines = () => {
     const [data, setData] = useState(null);
     async function fetchData() {
