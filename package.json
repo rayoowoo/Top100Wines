@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "heroku-postbuild": "npm run start && cd client/ && npm install && npm install --only=dev --no-shrinkwrap"
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap"
   },
     "engines": {
       "node": "10.13.0",
