@@ -10,24 +10,24 @@ const fetchTastingNode = id => {
     }
 }
 
-const fetchWines = () => {
-    return $.ajax({
-        method: 'GET',
-        url: 'http://localhost:3001/api/wines'
-    })
-}
+// const fetchWines = () => {
+//     return $.ajax({
+//         method: 'GET',
+//         url: '/api/wines'
+//     })
+// }
 
-const fetchWineEx = id => {
-    return $.ajax({
-        method: 'GET',
-        url: `http://localhost:3001/api/wines/${id}`
-    })
-}
+// const fetchWineEx = id => {
+//     return $.ajax({
+//         method: 'GET',
+//         url: `/api/wines/${id}`
+//     })
+// }
 
 export const useFetchWines = () => {
     const [wines, setWines] = useState(null);
     async function fetchData() {
-        const response = await fetchWines();
+        const response = await fetch('/api/wines');
         setWines(response);
     }
     useEffect(() => { fetchData() }, []);
@@ -49,7 +49,7 @@ export const useFetchNote = id => {
 export const useFetchWineEx = id => {
     const [wine, setWine] = useState(null);
     async function fetchData() {
-        const response = await fetchWineEx(id);
+        const response = await fetch(`/api/wines/${id}`);
         setWine(response);
     }
     useEffect(() => { fetchData() }, []);
