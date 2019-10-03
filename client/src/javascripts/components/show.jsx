@@ -40,7 +40,7 @@ export default ({id}) => {
                     </tr>
                     <tr>
                         <td>Price:</td>
-                        <td>{price}</td>
+                        <td>${price}</td>
                     </tr>
                     <tr>
                         <td>Issued:</td>
