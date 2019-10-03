@@ -28,7 +28,8 @@ export const useFetchWines = () => {
     const [wines, setWines] = useState(null);
     async function fetchData() {
         const response = await fetch('/api/wines');
-        setWines(response);
+        const result = await response.json();
+        setWines(result);
     }
     useEffect(() => { fetchData() }, []);
     return wines;
@@ -50,7 +51,8 @@ export const useFetchWineEx = id => {
     const [wine, setWine] = useState(null);
     async function fetchData() {
         const response = await fetch(`/api/wines/${id}`);
-        setWine(response);
+        const result = await response.json();
+        setWine(result);
     }
     useEffect(() => { fetchData() }, []);
     return wine;
