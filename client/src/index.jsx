@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './javascripts/app';
-require("babel-polyfill");
+
+
 
 document.addEventListener("DOMContentLoaded", e => {
     const root = document.getElementById("root");

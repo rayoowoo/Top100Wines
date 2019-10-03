@@ -2,7 +2,6 @@ import $ from 'jquery';
 import { useState, useEffect } from 'react';
 
 const fetchTastingNode = id => {
-    console.log("hi");
     if (id) {
         return $.ajax({
             method: 'GET',
@@ -14,9 +13,11 @@ const fetchTastingNode = id => {
 const fetchWines = () => {
     return $.ajax({
         method: 'GET',
-        url: `/api/wines`
+        url: 'http://localhost:3001/api/wines'
     })
 }
+
+window.fetch = fetchWines;
 
 export const useFetchWines = () => {
     const [data, setData] = useState(null);

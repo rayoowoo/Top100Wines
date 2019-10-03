@@ -1,6 +1,6 @@
 
 
-export default [
+const wines = [
     {
         "id": "451874",
         "winery_full": "Tenuta San Guido",
@@ -1702,3 +1702,5 @@ export default [
         "top100_rank": 100
     }
 ]
+
+module.exports = wines;
