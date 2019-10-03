@@ -4,8 +4,12 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run start"
+    "heroku-postbuild": "npm run start && cd client/ && npm install && npm install --only=dev --no-shrinkwrap"
   },
+    "engines": {
+      "node": "10.13.0",
+      "npm": "6.4.1"
+    },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
