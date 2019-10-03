@@ -10,9 +10,5 @@ const routes = {
 
 export default () => {
     const route = useRoutes(routes);
-    return (
-        <section className="wines">
-            {route}
-        </section>
-    )
+    return route;
 }

@@ -1,7 +1,6 @@
-
 .wines-list {
     width: 60%;
-    margin-top: 30vh;
+    margin-top: 35vh;
 }
 
 .wines-list-headers {
@@ -10,7 +9,9 @@
 }
 
 .wines-list-items {
-    padding: 2.5px 0px;
+    td {
+        padding: 0.35em 0.2em;
+    }
 
     tr:hover {
         background-color: darkred;

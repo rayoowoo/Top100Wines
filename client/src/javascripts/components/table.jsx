@@ -33,22 +33,27 @@ export default () => {
     const note = useFetchNote(wine.id)
 
     const display = wine.id ? (
-        <div className="wine-display-content">
+        <>
             <h1>{wine.wine_full}</h1>
             <p>{note}</p>
-        </div>
+
+        </>
     ) : (
-        <div className="wine-display-content">
+        <>
             <h1>Hover over a wine!</h1>
             <p>Information about the wine's taste will show up here.</p>
-        </div>
+        </>
     );
 
     return (
-        <>
+        <div className="wines">
             <div className="wine-display">
                 <header className="title">TOP 100 Wines of 2018</header>
-                {display}
+                <div className="wine-display-content">
+                    {display}
+                    <section>Click on a row for details.</section>
+                </div>
+                
             </div>
 
             <table className="wines-list">
@@ -67,6 +72,6 @@ export default () => {
                 </tbody>
 
             </table>
-        </>
+        </div>
     )
 }
