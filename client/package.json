@@ -37,7 +37,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "hookrouter": "^1.2.3",
     "jquery": "^3.4.1",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "lodash": "^4.17.15",
     "nodemon": "^1.19.3",
     "postcss-loader": "^3.0.0",
